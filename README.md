@@ -14,13 +14,15 @@ If helps you build your own Telegram clients.
 
 ## Installation
 
-This library works with Python 3.6+ only.
+This library works with Python 3.5+ only.
 
 See [documentation](http://python-telegram.readthedocs.io/en/latest/#installation) to install
 
 ### Docker
 
 This library has [docker image](https://hub.docker.com/r/akhmetov/python-telegram/):
+
+Install with pip:
 
 ```sh
 docker run -i -t --rm \
