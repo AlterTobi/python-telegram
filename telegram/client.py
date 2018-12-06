@@ -66,16 +66,16 @@ class Telegram(object):
 
         self._authorized = False
         self._is_enabled = False
-        self._queue: queue.Queue = queue.Queue()
+        self._queue = queue.Queue()
 
-        self._workers_queue: queue.Queue = queue.Queue()
+        self._workers_queue = queue.Queue()
         if not worker:
             worker = SimpleWorker
         self.worker = worker(queue=self._workers_queue)
 
-        self._results: Dict[str, AsyncResult] = {}
-        self._message_handlers: List[Callable] = []
-        self._update_handlers: List[Callable] = []
+        self._results = {}
+        self._message_handlers = []
+        self._update_handlers = []
 
         self._tdjson = TDJson(
             library_path=library_path,
